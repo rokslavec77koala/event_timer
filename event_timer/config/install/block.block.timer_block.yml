@@ -1,0 +1,15 @@
+id: timer_block
+theme: bartik
+weight: 0
+status: true
+langcode: en
+region: 'sidebar_first'
+plugin: timer_block
+settings:
+  label: 'Test 12345'
+dependencies:
+  module:
+    - event_timer
+  theme:
+    - classy
+visibility: {  }

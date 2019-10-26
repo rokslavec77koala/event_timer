@@ -1,0 +1,6 @@
+name: Event timer
+description: A sidebar block that displays how many days are left until an event
+package: Custom
+type: module
+version: 1.0
+core: 8.x
