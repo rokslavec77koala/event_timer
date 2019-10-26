@@ -6,7 +6,7 @@ langcode: en
 region: 'sidebar_first'
 plugin: timer_block
 settings:
-  label: 'Test 12345'
+  label: 'Event timer'
 dependencies:
   module:
     - event_timer

@@ -1,0 +1,6 @@
+services:
+  event_timer.event_date:
+    class: Drupal\event_timer\Services\EventTime
+    arguments: ['%event_timer.event_date%']
+parameters:
+    event_timer.event_date: 

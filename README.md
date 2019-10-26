@@ -15,4 +15,4 @@ Drupal 8.x
 
 ## Author
 
-* **Rok Slavec** - [rokslavec77koala](https://github.com/rokslavec77koala/event_timer.git)
+* **Rok Slavec**
