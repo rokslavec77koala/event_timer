@@ -29,10 +29,10 @@ class Timer extends BlockBase
         if ($node instanceof \Drupal\node\NodeInterface) {
             $type_name = $node->getType();
             if ($type_name == 'event') {
-                $event_date_string = $node->get('field_event_date')->value;
+                $event_datetime_string = $node->get('field_event_date')->value;
         
                 $service = \Drupal::service('event_timer.event_date');
-                $event_timer_string = $service->getEventTimerString($event_date_string);
+                $event_timer_string = $service->getEventTimerString($event_datetime_string);
 
                 return [
                     '#markup' => $event_timer_string,
