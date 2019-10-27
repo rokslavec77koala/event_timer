@@ -2,6 +2,8 @@
 
 namespace Drupal\event_timer\Services;
 
+use Drupal\Core\Datetime\DrupalDateTime;
+
 class EventTime
 {
     public function __construct()
@@ -11,10 +13,11 @@ class EventTime
     
     public function getEventTimerString($event_datetime_string)
     {
-        $event_date_string = explode('T', $event_datetime_string)[0];
+        $event_datetime_timezone = new DrupalDateTime($event_datetime_string, 'UTC');
+        $event_datetime_timezone->setTimezone(new \DateTimeZone(drupal_get_user_timezone()));
         
         $today = strtotime(date('Y-m-d'));
-        $event_date = strtotime($event_date_string);
+        $event_date = strtotime($event_datetime_timezone);
         
         $date_diff = $event_date - $today;
         $date_diff_days = round($date_diff / (60*60*24));
