@@ -16,3 +16,9 @@ Drupal 8.x
 ## Author
 
 * **Rok Slavec**
+
+## Future improvemets
+
+* Add block to the sidebar of any theme automatically
+* Restrict block configuration by content type (event)
+* Add alternative (more secure) way to get node data in \Plugin\Block\Timer.php
