@@ -25,6 +25,7 @@ class Timer extends BlockBase
     */
     public function build()
     {
+        // TODO: add alternative (more secure) way to get node data
         $node = \Drupal::routeMatch()->getParameter('node');
         if ($node instanceof \Drupal\node\NodeInterface) {
             $type_name = $node->getType();

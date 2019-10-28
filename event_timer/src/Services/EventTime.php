@@ -20,10 +20,12 @@ class EventTime
         $event_date = strtotime($event_datetime_timezone);
         
         $date_diff = $event_date - $today;
-        $date_diff_days = round($date_diff / (60*60*24));
+        $date_diff_days = floor($date_diff / (60*60*24));
         
-        if ($date_diff_days > 0) { // Event in future
+        if ($date_diff_days > 1) {
             return $date_diff_days.' days left until event starts';
+        } elseif ($date_diff_days == 1) {
+            return '1 day left until event starts';
         } elseif ($date_diff_days == 0) {
             return 'This event is happening today';
         } else {
